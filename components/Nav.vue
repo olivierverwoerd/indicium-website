@@ -94,8 +94,8 @@
           url: '/contact'
         },
         {
-          title: 'Bestuur worden',
-          url: '/bestuur-worden'
+          title: 'Info voor eerstejaars',
+          url: '/info-voor-eerstejaars'
         },
         {
           title: 'Lid worden',
