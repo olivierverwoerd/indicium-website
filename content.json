@@ -177,7 +177,7 @@
         },
         {
           "title": "Het bestuur",
-          "description": "In bestuursjaar 2019-2020 hebben we een vierkoppig bestuur. Na hard werken aan het begin van het jaar is er een bestuur gevormd, dat natuurlijk uit alleen maar HBO-ICT-studenten bestaat.",
+          "description": "In bestuursjaar 2021-2022 hebben we een vierkoppig bestuur. Na hard werken aan het begin van het jaar is er een bestuur gevormd, dat natuurlijk uit alleen maar HBO-ICT-studenten bestaat.",
           "type": "text-left",
           "button": {
             "text": "Meer weten",
@@ -240,7 +240,7 @@
           }
         },
         {
-          "description": "Heb je wel interesse om je steentje bij te dragen, maar weet je niet of het iets voor je is? Stuur dan een mailtje naar <a href=\"mailto:joostlekkerkerker@indicium.hu\">joostlekkerkerker@indicium.hu</a>!",
+          "description": "Heb je wel interesse om je steentje bij te dragen, maar weet je niet of het iets voor je is? Stuur dan een mailtje naar <a href=\"mailto:bestuur@indicium.hu\">bestuur@indicium.hu</a>!",
           "type": "text-left"
         }
       ]
@@ -485,26 +485,26 @@
         {
           "title": "Het bestuur",
           "type": "text-center",
-          "description": "Dit is het vijftallige bestuur wat de studievereniging leidt"
+          "description": "Dit is het viertallige bestuur wat de studievereniging leidt"
         },
         {
-          "title": "Jasper Nellestijn",
+          "title": "Kevin de Meijer",
           "subTitle": "Voorzitter",
           "type": "text-left"
         },
         {
-          "title": "Joost Lekkerkerker",
+          "title": "Jasper Nellestijn",
           "subTitle": "Secretaris",
           "type": "text-right"
         },
         {
-          "title": "Stefanie Twisker",
+          "title": "Yaïr Westmaas",
           "subTitle": "Penningmeester",
           "type": "text-left"
         },
         {
-          "title": "Rick Holtman",
-          "subTitle": "Vicevoorzitter",
+          "title": "Jasper van Loon",
+          "subTitle": "Algemeen Commissaris",
           "type": "text-right"
         }
       ]
