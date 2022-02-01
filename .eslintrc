@@ -12,7 +12,6 @@
   "extends": [
     "eslint:recommended",
     "plugin:vue/recommended",
-    "airbnb-base",
     "@nuxtjs"
   ],
   "rules": {
