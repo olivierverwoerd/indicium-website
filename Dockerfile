@@ -1,6 +1,6 @@
 FROM node:lts-alpine
 
-RUN apk add g++ make python3 py3-pip
+RUN apk add g++ make python2
 
 ARG NUXT_ENV_BRANCH
 ENV APP_ROOT /home/appuser
