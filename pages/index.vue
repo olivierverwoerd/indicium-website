@@ -1,93 +1,80 @@
 <template>
-  <div>
-    <Heading />
+	<div>
+		<Heading />
 
-    <no-ssr>
-      <Sponsoren />
-    </no-ssr>
+		<no-ssr>
+			<Sponsoren />
+		</no-ssr>
 
-    <div class="container">
-      <TextBlock
-        :type="getBlockContentByTitle('Over Indicium', page.content).type"
-        :title="getBlockContentByTitle('Over Indicium', page.content).title"
-        :text="getBlockContentByTitle('Over Indicium', page.content).description"
-        :contained="true"
-      />
-    </div>
+		<div class="container">
+			<TextBlock
+				:type="getBlockContentByTitle('Over Indicium', page.content).type"
+				:title="getBlockContentByTitle('Over Indicium', page.content).title"
+				:text="getBlockContentByTitle('Over Indicium', page.content).description"
+				:contained="true"
+			/>
+		</div>
 
-    <Events />
+		<Events />
 
-    <div class="container">
-      <TextBlock
-        :type="getBlockContentByTitle('Lid zijn is meedoen!', page.content).type"
-        :title="getBlockContentByTitle('Lid zijn is meedoen!', page.content).title"
-        :text="getBlockContentByTitle('Lid zijn is meedoen!', page.content).description"
-        :button="getBlockContentByTitle('Lid zijn is meedoen!', page.content).button"
-        :contained="true"
-      />
-      <TextBlock
-        :type="getBlockContentByTitle('Commissies?', page.content).type"
-        :title="getBlockContentByTitle('Commissies?', page.content).title"
-        :text="getBlockContentByTitle('Commissies?', page.content).description"
-        :button="getBlockContentByTitle('Commissies?', page.content).button"
-        :contained="true"
-      />
-    </div>
-  </div>
+		<div class="container">
+			<TextBlock
+				:type="getBlockContentByTitle('Lid zijn is meedoen!', page.content).type"
+				:title="getBlockContentByTitle('Lid zijn is meedoen!', page.content).title"
+				:text="getBlockContentByTitle('Lid zijn is meedoen!', page.content).description"
+				:button="getBlockContentByTitle('Lid zijn is meedoen!', page.content).button"
+				:contained="true"
+			/>
+			<TextBlock
+				:type="getBlockContentByTitle('Commissies?', page.content).type"
+				:title="getBlockContentByTitle('Commissies?', page.content).title"
+				:text="getBlockContentByTitle('Commissies?', page.content).description"
+				:button="getBlockContentByTitle('Commissies?', page.content).button"
+				:contained="true"
+			/>
+		</div>
+	</div>
 </template>
 
-<script>
-import Heading from '../components/Heading';
-import Sponsoren from '../components/Sponsoren';
-import TextBlock from '../components/TextBlock';
-import Events from '../components/Events';
-import content from '../content.json';
-import { getBlockContentByTitle, getPageData } from '../utils';
+<script lang="ts">
+	import Vue from "vue"
+	import Component from "vue-class-component"
 
-export default {
-  name: 'Home',
-  components: {
-    Heading,
-    Sponsoren,
-    TextBlock,
-    Events
-  },
-  methods: {
-    getBlockContentByTitle: getBlockContentByTitle
-  },
-  data: () => ({
-    page: getPageData('')
-  }),
-  head() {
-    return {
-      title: this.page.title !== undefined ? this.page.title : content.title,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content:
-            this.page.description !== undefined
-              ? this.page.description
-              : content.description
-        }
-      ]
-    };
-  }
-};
+	import Heading from "../components/Heading.vue"
+	import Sponsoren from "../components/Sponsoren.vue"
+	import TextBlock from "../components/TextBlock.vue"
+	import Events from "../components/Events.vue"
+	import { getBlockContentByTitle, getPageData } from "~/utils"
+
+	@Component({
+		components: {
+			Heading,
+			Sponsoren,
+			TextBlock,
+			Events
+		}
+	})
+	export default class Index extends Vue {
+		page = getPageData("")
+
+		getBlockContentByTitle(title: string, contentBlocks: any): any {
+			return getBlockContentByTitle(title, contentBlocks)
+		}
+	}
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/scss/variables.scss';
+	@import '../assets/scss/variables.scss';
 
-* {
-  box-sizing: border-box;
-}
+	* {
+		box-sizing: border-box;
+	}
 
-.text-block, .image-block {
-  padding: 80px 0;
+	.text-block, .image-block {
+		padding: 80px 0;
 
-  @media screen and (max-width: $bp-tablet-sm) {
-    padding: 12px 0;
-  }
-}
+		@media screen and (max-width: $bp-tablet-sm) {
+			padding: 12px 0;
+		}
+	}
 </style>
