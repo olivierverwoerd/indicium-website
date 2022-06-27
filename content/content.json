@@ -19,7 +19,7 @@
           "type": "text-center",
           "button": {
             "text": "Direct Inschrijven",
-            "url": "/aanmelden"
+            "url": "https://leden.conscribo.nl/svIndicium/aanmeldenlidmaatschap"
           }
         },
         {
@@ -61,31 +61,6 @@
     },
     {
       "render": true,
-      "slug": "ehbt",
-      "title": "Eerste hulp bij thuisquarantaine",
-      "content": [
-        {
-          "title": "Eerste hulp bij thuisquarantaine",
-          "description": "In deze moeilijke tijd is het fijn om dingen te hebben om te doen om je niet te vervelen. Zo kun je nieuwe dingen leren zoals programmeertalen of iets anders. Een aantal bedrijven hebben hun services tijdelijk uitgebreid vanwege de crisis, de educom heeft een lijst opgesteld met die services, en andere dingen die je kan doen of leren. Elke week zal hij worden aangevuld met jullie input en andere dingen die we vinden.",
-          "type": "text-center",
-          "button": {
-            "text": "Bekijk hier de lijst",
-            "url": "https://indicium.hu/ehbt.pdf"
-          }
-        },
-        {
-          "title": "Toevoegingen?",
-          "description": "Heb jij nu ook iets leuks gevonden wat op deze lijst moet? Vul de form in en misschien komt hij wel op de lijst!",
-          "type": "text-center",
-          "button": {
-            "text": "Invulformulier",
-            "url": "https://forms.gle/cRnPiU3iTcuP8SNw8"
-          }
-        }
-      ]
-    },
-    {
-      "render": true,
       "slug": "bestuur-worden",
       "title": "Bestuur worden",
       "content": [
@@ -99,8 +74,12 @@
           "type": "text-left"
         },
         {
-          "description": "Wat we momenteel zoeken is een algemeen commissaris. Als algemeen commissaris zal je minstens 1 commissie op je nemen en zal je algemene portefuilles, denk hierbij aan social media, partners of promotie, op kunnen pakken. Dit ligt vooral aan waar je goed in bent en waar je voorkeur zelf ligt.",
-          "type": "text-left"
+          "description": "Er is wel een andere optie: de minor Leiderschap. Deze minor is gemaakt voor studentbestuurders die graag een jaar bestuur willen doen en daarvoor hun studie (deels) aan de kant willen zetten. Deze minor duurt een jaar en levert je net als de meeste minors 30 EC (studiepunten) op. Als je verder geen studievertraging oploopt, kun je dus in 4,5 jaar je diploma halen in plaats van 4 jaar. De minor Leiderschap kun je ook een hoop van leren naast je bestuursjaar.",
+          "type": "text-left",
+          "button": {
+            "text": "Lees meer over de minor leiderschap",
+            "url": "https://minorleiderschap.nl/"
+          }
         },
         {
           "title": "Wat heb je eraan?",
@@ -112,7 +91,7 @@
           "type": "text-left"
         },
         {
-          "description": "Je leert een hoop!\nJe leert echt een hoop van een bestuursjaar! Een jaar lang samenwerken met dezelfde mensen zorgt ervoor dat je goed leert samenwerken. In dat jaar heb je ook veel contact met mensen buiten je bestuur en vereniging, waardoor je communicatieve vaardigheden een boost krijgen. En je bent een van de laatste personen die de kwaliteit van de vereniging kan waarborgen, waardoor je een sterk verantwoordelijkheidsgevoel opbouwt.",
+          "description": "Je leert een hoop!\nJe leert echt een hoop van een bestuursjaar! Een jaar lang samenwerken met dezelfde mensen zorgt ervoor dat je goed leert samenwerken. In dat jaar heb je ook veel contact met mensen buiten je bestuur en vereniging, waardoor je communicatieve vaardigheden een boost krijgen. En je bent een van de laatste personen die de kwaliteit van de vereniging kan waarborgen, waardoor je een sterk verantwoordelijkheidsgevoel opbouwt. \nVerder zijn er natuurlijk nog vaardigheden die per bestuursrol uniek zijn. Als penningmeester zul je bijvoorbeeld leren financiële verantwoordelijkheid te dragen voor een organisatie groter dan jijzelf. Als secretaris zullen je administratieve vaardigheden sterk verbeteren. En als voorzitter leer je een bepaalde vorm van leiderschap waar je de rest van je leven een hoop aan zult hebben. \n",
           "type": "text-left"
         },
         {
@@ -125,12 +104,17 @@
           "type": "text-left"
         },
         {
+          "title": "Een half bestuursjaar is niet mogelijk",
+          "description": "Een half bestuursjaar doen is eigenlijk niet mogelijk. De redenen hiervoor zijn natuurlijk duidelijk: je taken moeten halverwege het collegejaar worden overgedragen, de rest van het bestuur moet deze taken ineens overnemen of iemand inwerken die ze overneemt terwijl ze ook nog de vereniging draaiende moeten houden en het is natuurlijk helemaal niet leuk voor de overige bestuurders als een medebestuurder hun verlaat. Daarnaast kun je als bestuurder in een half jaar niet tot volle kracht stijgen, een bestuurder die een jaar lang blijft bestuur doet kan veel meer voor de vereniging betekenen. ",
+          "type": "text-left"
+        },
+        {
           "title": "Bestuurder worden?",
           "description": "Klik dan op de link hieronder en vul het formulier in, dan neemt iemand van het huidige bestuur contact met je op. Je moet inloggen met je Google-account. ",
           "type": "text-left",
           "button": {
             "text": "Solliciteer",
-            "url": "https://forms.gle/Ux6unqJbCL4RbuXV8"
+            "url": "https://forms.gle/H8FsEqmu8FgCaDwRA"
           }
         },
         {
@@ -168,7 +152,7 @@
         },
         {
           "title": "Het bestuur",
-          "description": "In bestuursjaar 2019-2020 hebben we een vierkoppig bestuur. Na hard werken aan het begin van het jaar is er een bestuur gevormd, dat natuurlijk uit alleen maar HBO-ICT-studenten bestaat.",
+          "description": "In bestuursjaar 2021-2022 hebben we een vierkoppig bestuur. Na hard werken aan het begin van het jaar is er een bestuur gevormd, dat natuurlijk uit alleen maar HBO-ICT-studenten bestaat.",
           "type": "text-left",
           "button": {
             "text": "Meer weten",
@@ -231,7 +215,7 @@
           }
         },
         {
-          "description": "Heb je wel interesse om je steentje bij te dragen, maar weet je niet of het iets voor je is? Stuur dan een mailtje naar <a href=\"mailto:joostlekkerkerker@indicium.hu\">joostlekkerkerker@indicium.hu</a>!",
+          "description": "Heb je wel interesse om je steentje bij te dragen, maar weet je niet of het iets voor je is? Stuur dan een mailtje naar <a href=\"mailto:bestuur@indicium.hu\">bestuur@indicium.hu</a>!",
           "type": "text-left"
         }
       ]
@@ -239,20 +223,20 @@
     {
       "render": true,
       "slug": "introkamp",
-      "title": "Introkamp",
+      "title": "Introdag",
       "content": [
         {
-          "title": "Introkamp",
-          "description": "Elk jaar organiseert de studievereniging een introkamp voor alle nieuwe HBO-ICT studenten aan de Hogeschool Utrecht. Leer je nieuwe medestudenten kennen aan de hand van een gezellige tijd samen.",
+          "title": "Introdag",
+          "description": "Elk jaar organiseert de studievereniging een introkamp voor alle nieuwe HBO-ICT studenten aan de Hogeschool Utrecht. Echter, door de coronamaatregelen zijn we genoodzaakt om dit kamp dit jaar tot 1 dag te beperken. We zullen ons best doen om er een supertoffe dag van te maken.",
           "type": "text-center",
           "button": {
-            "text": "Meld je je aan voor updates",
-            "url": "https://forms.gle/iJ7U785SX167qHs36"
+            "text": "Aanmelden",
+            "url": "https://forms.office.com/r/XSH5AdzXPi"
           }
         },
         {
           "title": "Leer elkaar kennen",
-          "description": "Op het introkamp leer je je medestudenten kennen op een gezellige manier aan de hand van leuke activiteiten, zodat je je opleiding direct begint met nieuwe vrienden en kennissen! Op het introkamp maak je ook kennis met meerderejaars die alle vragen over de opleiding kan beantwoorden.",
+          "description": "Op de introdag leer je je medestudenten kennen op een gezellige manier aan de hand van leuke activiteiten, zodat je je opleiding direct begint met nieuwe vrienden en kennissen! Op de introdag maak je ook kennis met meerderejaars die alle vragen over de opleiding kan beantwoorden.",
           "type": "image-right",
           "imgUrl": "/introkamp/1.jpg"
         },
@@ -270,11 +254,11 @@
         },
         {
           "title": "",
-          "description": "Kom jij volgend jaar HBO-ICT studeren bij de Hogeschool Utrecht? Laat je email adres achter en we laten je weten wanneer je je kan inschrijven!",
+          "description": "Kom jij volgend jaar HBO-ICT studeren bij de Hogeschool Utrecht? Meld je aan voor de introdag voor de beste start van je studie! Het formulier sluit 18 augustus, dus wees er snel bij!",
           "type": "text-center",
           "button": {
-            "text": "Schrijf je in voor updates",
-            "url": "https://forms.gle/iJ7U785SX167qHs36"
+            "text": "Aanmelden",
+            "url": "https://forms.office.com/r/XSH5AdzXPi"
           }
         }
       ]
@@ -290,22 +274,22 @@
           "description": "Leuk dat je HBO-ICT bij ons komt studeren! Op deze pagina zie je wat Indicium voor jou kan betekenen en waarom je lid moet worden. Ook staat er informatie over onze intro, die dit jaar anders is dan normaal! Ben je nu al overtuigd om lid te worden? Klik dan op de knop hieronder.",
           "button": {
             "text": "Lid worden",
-            "url": "/aanmelden"
+            "url": "https://leden.conscribo.nl/svIndicium/aanmeldenlidmaatschap"
           }
         },
         {
           "subTitle": "Buddyprogramma",
           "type": "text-left",
-          "description": "Heb je veel vragen over het nieuwe schooljaar? Of zoek je contact met nieuwe mensen? Schrijf je in voor het buddy programma! Je wordt gekoppeld aan een meerderejaars, waar je alle vragen over je studie, de studievereniging en de HU kan stellen!",
-          "button": {
-            "text": "Meer informatie",
-            "url": "/buddyprogramma?utm_source=info-voor-eerstejaars&utm_medium=website&utm_campaign=info-voor-eerstejaars"
-          }
+          "description": "Heb je vragen over de studie of de stof? Of zoek je contact met nieuwe mensen? Schrijf je in voor het buddy programma! Je wordt gekoppeld aan een meerderejaars, waar je alle vragen over je studie, de studievereniging en de HU kan stellen! Meer informatie over dit buddyprogramma zal hier te vinden zijn. Dus houd deze pagina in de gaten"
         },
         {
-          "subTitle": "Introactiviteit: ICTers op safari",
+          "subTitle": "Introdag",
           "type": "text-left",
-          "description": "Wegens de nieuwe maatregelen van het kabinet kan onze introductiedag niet doorgaan. Dit vinden we erg jammer en hopen jullie terug te zien op een van de activiteiten van de vereniging."
+          "description": "Leer je nieuwe medestudenten kennen doormiddel van een supertoffe introdag! Ook leer je Utrecht en ouderejaars kennen. Zo kan je je studie goed beginnen.",
+          "button": {
+            "text": "Meld je aan",
+            "url": "/introkamp"
+          }
         },
         {
           "title": "",
@@ -349,7 +333,7 @@
           "description": "Dus wil je lid worden van Indicium? Dat kan voor maar €15! Je zit nergens aan vast, niks moet, alles mag! Inschrijven doe je via onderstaande knop.",
           "button": {
             "text": "Lid worden",
-            "url": "/aanmelden"
+            "url": "https://leden.conscribo.nl/svIndicium/aanmeldenlidmaatschap"
           }
         },
         {
@@ -476,26 +460,26 @@
         {
           "title": "Het bestuur",
           "type": "text-center",
-          "description": "Dit is het vijftallige bestuur wat de studievereniging leidt"
+          "description": "Dit is het viertallige bestuur wat de studievereniging leidt"
         },
         {
-          "title": "Jasper Nellestijn",
+          "title": "Kevin de Meijer",
           "subTitle": "Voorzitter",
           "type": "text-left"
         },
         {
-          "title": "Joost Lekkerkerker",
+          "title": "Jasper Nellestijn",
           "subTitle": "Secretaris",
           "type": "text-right"
         },
         {
-          "title": "Stefanie Twisker",
+          "title": "Yaïr Westmaas",
           "subTitle": "Penningmeester",
           "type": "text-left"
         },
         {
-          "title": "Rick Holtman",
-          "subTitle": "Vicevoorzitter",
+          "title": "Jasper van Loon",
+          "subTitle": "Algemeen Commissaris",
           "type": "text-right"
         }
       ]
