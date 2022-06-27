@@ -15,7 +15,7 @@
 
 <script>
 /* eslint-disable */
-import content from '../content.json'
+import content from '../content/content.json'
 export default {
 	name: 'Sponsoren',
 	data: () => ({

@@ -85,7 +85,7 @@
 				})
 		}
 
-		validate({ params }) {
+		validate({ params }: any) {
 			const activityId = params.activiteit.split("-").reverse()[0]
 			return /^\d+$/.test(activityId)
 		}

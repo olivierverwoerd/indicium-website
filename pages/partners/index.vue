@@ -23,7 +23,7 @@
 	import Component from "vue-class-component"
 	import Vue from "vue"
 
-	import content from "../../content.json"
+	import content from "../../content/content.json"
 	import Button from "~/components/interactions/button.vue"
 
 	@Component({

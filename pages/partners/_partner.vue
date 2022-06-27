@@ -15,7 +15,7 @@
 	import Vue from "vue"
 	import Component from "vue-class-component"
 
-	import content from '../../content.json'
+	import content from '../../content/content.json'
 	import Button from "~/components/interactions/button.vue"
 
 	@Component({
@@ -26,7 +26,7 @@
 	export default class Partner extends Vue {
 		partner = {}
 
-		validate({ params }) {
+		validate({ params }: any) {
 			return content.partners.some(partner => partner.slug === params.partner)
 		}
 

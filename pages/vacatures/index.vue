@@ -27,7 +27,7 @@
 	import Vue from "vue"
 
 	import axios from "axios"
-	import content from "../../content.json"
+	import content from "../../content/content.json"
 	import Button from "@/components/interactions/button.vue"
 	import Loading from "@/components/Loading.vue"
 
@@ -51,7 +51,7 @@
 				.then((response) => {
 					const vacancies = response.data.data
 					const shownVacancies = vacancies
-						.map(vacancy => ({
+						.map((vacancy: any) => ({
 							id: vacancy.id,
 							title: vacancy.attributes.title,
 							description: {

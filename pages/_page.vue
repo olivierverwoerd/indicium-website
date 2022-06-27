@@ -33,7 +33,7 @@
 	import Vue from "vue"
 	import Component from "vue-class-component"
 
-	import content from "../content.json"
+	import content from "../content/content.json"
 	import TextBlock from "../components/TextBlock.vue"
 	import ImageBlock from "../components/ImageBlock.vue"
 
@@ -52,7 +52,7 @@
 			this.$set(this, "page", pageData)
 		}
 
-		validate({ params: { page: pageParam } }) {
+		validate({ params: { page: pageParam } }: any) {
 			return content.pages.some(page => page.slug === pageParam && page.render)
 		}
 	}

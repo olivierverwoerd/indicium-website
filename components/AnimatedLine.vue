@@ -38,51 +38,43 @@
 	</div>
 </template>
 
-<script>
-/* eslint-disable */
-export default {
-	props: ['top', 'left', 'right', 'bottom', 'interval', 'rotate', 'doHideMobile'],
-	data: () => ({
-		isTracing: false,
-		isPulsing: false
-	}),
-	methods: {
+<script lang="ts">
+	import Component from "vue-class-component"
+	import Vue from "vue"
+	import { Prop } from "vue-property-decorator"
+
+	@Component
+	export default class AnimatedLine extends Vue {
+		@Prop({ type: Number }) top?: number
+		@Prop({ type: Number }) left?: number
+		@Prop({ type: Number }) right?: number
+		@Prop({ type: Number }) bottom?: number
+		@Prop({ type: Number }) rotate?: number
+		@Prop({ type: Number, required: true }) interval!: number
+		@Prop({ type: Boolean, default: false }) doHideMobile!: boolean
+
+		isTracing = false
+		isPulsing = false
+
+		tracingInterval = setInterval(this.toggleTrace, this.interval)
+
 		toggleTrace() {
 			const PULSE_TIME = 450
-			this.$set(this, 'isTracing', true)
+			this.$set(this, "isTracing", true)
 			setTimeout(() => {
-				this.$set(this, 'isPulsing', true)
+				this.$set(this, "isPulsing", true)
 			}, PULSE_TIME)
 
 			setTimeout(() => {
-				this.$set(this, 'isTracing', false)
-				this.$set(this, 'isPulsing', false)
+				this.$set(this, "isTracing", false)
+				this.$set(this, "isPulsing", false)
 			}, PULSE_TIME * 4)
 		}
-	},
-	computed: {
-		isMobile() {
-			return process.browser
-				? window.innerWidth < 700
-				: false
-		},
-		hideMobile() {
-			if(this.doHideMobile) {
-				return true
-			} else if(this.doHideMobile && this.isMobile) {
-				return true
-			}
 
-			return this.doHideMobile
+		destroyed() {
+			clearInterval(this.tracingInterval)
 		}
-	},
-	mounted() {
-		this.tracingInterval = setInterval(this.toggleTrace, this.interval)
-	},
-	destroyed() {
-		clearInterval(this.tracingInterval)
 	}
-}
 </script>
 
 <style lang="scss" scoped>

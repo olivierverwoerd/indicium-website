@@ -47,7 +47,7 @@
 		}
 
 		mapFetchedEvents(events: any) {
-			this.calendarOptions.events = events.map(event => ({
+			this.calendarOptions.events = events.map((event: any) => ({
 				id: event.id,
 				title: event.attributes.title,
 				start: event.attributes.start,

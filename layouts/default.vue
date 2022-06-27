@@ -1,12 +1,12 @@
 <template>
-	<v-app>
+	<div>
 		<Nav />
 		<NavMobile />
 		<v-main>
 			<nuxt />
 		</v-main>
 		<Footer />
-	</v-app>
+	</div>
 </template>
 
 <script lang="ts">

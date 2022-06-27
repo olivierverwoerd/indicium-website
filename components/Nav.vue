@@ -110,7 +110,7 @@
 
 <script>
 /* eslint-disable */
-import menu from "../assets/menu.json";
+import menu from "../content/menu.json";
 export default {
   name: "Nav",
   computed: {

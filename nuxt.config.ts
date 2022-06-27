@@ -66,7 +66,7 @@ const config: Omit<NuxtConfig, "env"> = {
 
   plugins: [
     "plugins/filters",
-    "plugins/event-bus",
+    "plugins/busje",
     "plugins/full-calendar",
     "plugins/slick",
     "plugins/api-clients"

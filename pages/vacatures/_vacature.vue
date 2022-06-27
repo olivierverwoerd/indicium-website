@@ -39,7 +39,7 @@
 	import Vue from "vue"
 
 	import axios from "axios"
-	import content from "@/content.json"
+	import content from "~/content/content.json"
 	import Button from "@/components/interactions/button.vue"
 	import Loading from "~/components/Loading.vue"
 
@@ -76,7 +76,7 @@
 			this.loading = false
 		}
 
-		validate({ params }) {
+		validate({ params }: any) {
 			const vacancyId = params.vacature.split("-")[0]
 			return /^\d+$/.test(vacancyId)
 		}
