@@ -1,8 +1,0 @@
-name: NPM Build
-
-on:
-  pull_request:
-
-jobs:
-  build:
-    uses: svIndicium/Workflows/.github/workflows/npm-build.yml@master
