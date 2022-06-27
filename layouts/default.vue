@@ -1,22 +1,29 @@
 <template>
-  <div>
-    <Nav />
-    <NavMobile />
-    <nuxt />
-    <Footer />
-  </div>
+	<div>
+		<Nav />
+		<NavMobile />
+		<v-main>
+			<nuxt />
+		</v-main>
+		<Footer />
+	</div>
 </template>
 
-<script>
-import Nav from "../components/Nav";
-import NavMobile from "../components/NavMobile";
-import Footer from "../components/Footer";
+<script lang="ts">
+	import Vue from "vue"
+	import Component from "vue-class-component"
 
-export default {
-  components: {
-    Nav,
-    NavMobile,
-    Footer,
-  },
-};
+	import Nav from "../components/Nav.vue"
+	import NavMobile from "../components/NavMobile.vue"
+	import Footer from "../components/Footer.vue"
+
+	@Component({
+		components: {
+			Nav,
+			NavMobile,
+			Footer
+		}
+	})
+	export default class Default extends Vue {
+	}
 </script>

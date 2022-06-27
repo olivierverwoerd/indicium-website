@@ -197,7 +197,7 @@
 </template>
 
 <script>
-import menu from "../assets/menu.json";
+import menu from "../content/menu.json";
 export default {
   name: "NavMobile",
   computed: {

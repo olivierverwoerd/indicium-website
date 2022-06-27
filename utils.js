@@ -1,4 +1,4 @@
-import content from './content.json'
+import content from './content/content.json'
 
 export function getPageData(slug) {
     return content.pages.find(page => page.slug === slug)
