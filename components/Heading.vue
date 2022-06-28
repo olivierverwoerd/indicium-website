@@ -108,6 +108,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 1;
 
     h1 {
       max-width: 832px;
