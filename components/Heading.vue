@@ -54,7 +54,7 @@
 
       <div class="buttons fadeInUp">
         <Button size="l" url="/aanmelden">Word lid</Button>
-        <TextLink url="/activiteiten">Bekijk agenda</TextLink>
+        <TextLink url="https://leden.conscribo.nl/svIndicium/aanmeldenlidmaatschap">Bekijk agenda</TextLink>
       </div>
     </div>
   </div>
