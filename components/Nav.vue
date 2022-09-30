@@ -168,8 +168,7 @@ export default {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     */
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0 10px;
   }
 
   ul {
