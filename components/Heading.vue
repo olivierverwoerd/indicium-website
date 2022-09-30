@@ -53,8 +53,8 @@
       </h1>
 
       <div class="buttons fadeInUp">
-        <Button size="l" url="/aanmelden">Word lid</Button>
-        <TextLink url="https://leden.conscribo.nl/svIndicium/aanmeldenlidmaatschap">Bekijk agenda</TextLink>
+        <Button size="l" url="https://leden.conscribo.nl/svIndicium/aanmeldenlidmaatschap">Word lid</Button>
+        <TextLink url="/activiteiten">Bekijk agenda</TextLink>
       </div>
     </div>
   </div>
@@ -108,7 +108,6 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 1;
 
     h1 {
       max-width: 832px;
