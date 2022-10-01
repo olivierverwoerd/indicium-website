@@ -1,0 +1,15 @@
+{
+    "cSpell.language": "en,nl",
+    "editor.defaultFormatter": "Vue.volar",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "cSpell.words": [
+        "indi",
+        "svindicium"
+    ],
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    }
+}

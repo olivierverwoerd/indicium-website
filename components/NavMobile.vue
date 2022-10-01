@@ -11,168 +11,72 @@
         <img :src="logoUrl" alt="Indicium Logo" />
       </div>
 
-      <div
-        class="nav-toggle"
-        v-bind:class="{ rotated: navLevel }"
-        @click="setNavLevel(Number(!navLevel))"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="30"
-          height="30"
-          viewBox="0 0 30 30"
-          fill="none"
-          stroke-width="2"
-          stroke-linecap="square"
-          stroke-linejoin="arcs"
-        >
-          <line
-            v-bind:class="{ green: navLevel > 2 }"
-            x1="7.5"
-            y1="10"
-            x2="22.5"
-            y2="10"
-          ></line>
-          <line
-            v-bind:class="{ bluegreen: navLevel > 1 }"
-            x1="7.5"
-            y1="15"
-            x2="22.5"
-            y2="15"
-          ></line>
-          <line
-            v-bind:class="{ blue: navLevel > 0 }"
-            x1="7.5"
-            y1="20"
-            x2="22.5"
-            y2="20"
-          ></line>
+      <div class="nav-toggle" v-bind:class="{ rotated: navLevel }" @click="setNavLevel(Number(!navLevel))">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke-width="2"
+          stroke-linecap="square" stroke-linejoin="arcs">
+          <line v-bind:class="{ green: navLevel > 2 }" x1="7.5" y1="10" x2="22.5" y2="10"></line>
+          <line v-bind:class="{ bluegreen: navLevel > 1 }" x1="7.5" y1="15" x2="22.5" y2="15"></line>
+          <line v-bind:class="{ blue: navLevel > 0 }" x1="7.5" y1="20" x2="22.5" y2="20"></line>
         </svg>
       </div>
     </div>
 
     <div class="mobile-menu" v-bind:class="{ visible: navLevel }">
-      <div
-        class="menubar blue"
-        v-bind:class="{ visible: navLevel > 0 }"
-        @click.self="setNavLevel(1)"
-      >
+      <div class="menubar blue" v-bind:class="{ visible: navLevel > 0 }" @click.self="setNavLevel(1)">
         <div class="menu level-1" v-bind:class="{ visible: navLevel > 0 }">
           <ul>
             <li v-show="isMobile">
-              <n-link to="/" prefetch @click.native="setNavLevel(0)"
-                >Home</n-link
-              >
+              <n-link to="/" prefetch @click="setNavLevel(0)">Home</n-link>
             </li>
-            <li
-              v-for="item in items"
-              :key="item.title + item.url + item.childs"
-              @click.self="setNavLevel(0)"
-            >
-              <a
-                v-if="item.url.startsWith('http')"
-                :href="item.url"
-                target="_blank"
-                @click.native="setNavLevel(0)"
-              >
+            <li v-for="item in items" :key="item.title + item.url + item.childs" @click.self="setNavLevel(0)">
+              <a v-if="item.url.startsWith('http')" :href="item.url" target="_blank" @click="setNavLevel(0)">
                 {{ item.title }}
               </a>
 
-              <n-link
-                v-else
-                :to="item.url"
-                prefetch
-                @click.native="setNavLevel(0)"
-              >
+              <n-link v-else :to="item.url" prefetch @click="setNavLevel(0)">
                 {{ item.title }}
               </n-link>
 
-              <label
-                v-if="item.childs"
-                title="Toggle Drop-down"
-                class="sub-menu-toggle"
-                @click="setCurrentLevel2(item.title)"
-                >‌‌ ‌‌ ‌‌▸‌‌ ‌‌ ‌‌‌‌ ‌‌‌
+              <label v-if="item.childs" title="Toggle Drop-down" class="sub-menu-toggle"
+                @click="setCurrentLevel2(item.title)">‌‌ ‌‌ ‌‌▸‌‌ ‌‌ ‌‌‌‌ ‌‌‌
               </label>
 
-              <div
-                class="menubar bluegreen"
-                v-bind:class="{ visible: item.title == currentLevel2 }"
-                @click.self="setNavLevel(2)"
-              >
-                <div
-                  class="menu level-2"
-                  v-bind:class="{ visible: item.title == currentLevel2 }"
-                >
+              <div class="menubar bluegreen" v-bind:class="{ visible: item.title == currentLevel2 }"
+                @click.self="setNavLevel(2)">
+                <div class="menu level-2" v-bind:class="{ visible: item.title == currentLevel2 }">
                   <ul class="sub-menu">
-                    <li
-                      class="sub-menu-li"
-                      v-for="child in item.childs"
-                      :key="
-                        child.title +
-                        child.url +
-                        child.childs +
-                        child.childs_side
-                      "
-                    >
-                      <a
-                        v-if="child.url.startsWith('http')"
-                        :href="child.url"
-                        target="_blank"
-                        @click.native="setNavLevel(0)"
-                      >
+                    <li class="sub-menu-li" v-for="child in item.childs" :key="
+                      child.title +
+                      child.url +
+                      child.childs +
+                      child.childs_side
+                    ">
+                      <a v-if="child.url.startsWith('http')" :href="child.url" target="_blank" @click="setNavLevel(0)">
                         {{ child.title }}
                       </a>
 
-                      <n-link
-                        v-else
-                        :to="item.url"
-                        prefetch
-                        @click.native="setNavLevel(0)"
-                      >
+                      <n-link v-else :to="item.url" prefetch @click="setNavLevel(0)">
                         {{ child.title }}
                       </n-link>
 
-                      <label
-                        v-if="child.childs"
-                        title="Toggle Drop-down"
-                        class="sub-menu-toggle"
-                        @click="setCurrentLevel3(child.title)"
-                        >‌‌ ‌‌ ‌‌▸‌‌ ‌‌ ‌‌‌‌ ‌‌‌
+                      <label v-if="child.childs" title="Toggle Drop-down" class="sub-menu-toggle"
+                        @click="setCurrentLevel3(child.title)">‌‌ ‌‌ ‌‌▸‌‌ ‌‌ ‌‌‌‌ ‌‌‌
                       </label>
 
-                      <div
-                        class="menubar green"
-                        v-bind:class="{ visible: child.title == currentLevel3 }"
-                        @click.self="setNavLevel(3)"
-                      >
-                        <div
-                          class="menu level-3"
-                          v-bind:class="{
-                            visible: child.title == currentLevel3,
-                          }"
-                        >
+                      <div class="menubar green" v-bind:class="{ visible: child.title == currentLevel3 }"
+                        @click.self="setNavLevel(3)">
+                        <div class="menu level-3" v-bind:class="{
+                          visible: child.title == currentLevel3,
+                        }">
                           <ul class="sub-sub-menu">
-                            <li
-                              class="sub-sub-menu-li"
-                              v-for="grand_child in child.childs"
-                              :key="grand_child.title + grand_child.url"
-                            >
-                              <a
-                                v-if="grand_child.url.startsWith('http')"
-                                :href="grand_child.url"
-                                target="_blank"
-                                @click.native="setNavLevel(0)"
-                              >
+                            <li class="sub-sub-menu-li" v-for="grand_child in child.childs"
+                              :key="grand_child.title + grand_child.url">
+                              <a v-if="grand_child.url.startsWith('http')" :href="grand_child.url" target="_blank"
+                                @click="setNavLevel(0)">
                                 {{ grand_child.title }}
                               </a>
 
-                              <n-link
-                                v-else
-                                :to="item.url"
-                                prefetch
-                                @click.native="setNavLevel(0)"
-                              >
+                              <n-link v-else :to="item.url" prefetch @click="setNavLevel(0)">
                                 {{ grand_child.title }}
                               </n-link>
                             </li>
@@ -187,11 +91,7 @@
           </ul>
         </div>
       </div>
-      <div
-        class="mobile-menu-shadow"
-        v-bind:class="{ hidden: !navLevel }"
-        @click="setNavLevel(0)"
-      ></div>
+      <div class="mobile-menu-shadow" v-bind:class="{ hidden: !navLevel }" @click="setNavLevel(0)"></div>
     </div>
   </nav>
 </template>
@@ -210,7 +110,7 @@ export default {
   },
   methods: {
     setNavLevel(value) {
-      if (value != this.$navLevel) {
+      if (value !== this.$navLevel) {
         console.log("NavLevel: " + value);
         if (value < 3) {
           this.$currentLevel3 = "-";
@@ -285,6 +185,7 @@ $shadowspace: 10vw;
 
     .logo {
       position: relative;
+
       img {
         transform: translateY(10%);
         position: relative;
@@ -316,16 +217,20 @@ $shadowspace: 10vw;
         height: 16vw;
         max-height: 68px;
         transition: $transition-time ease-in-out;
+
         line {
           transition-property: stroke;
+
           &.blue {
             transition-delay: $transition-time;
             stroke: var(--indi-blue-1);
           }
+
           &.bluegreen {
             transition-delay: $transition-time;
             stroke: var(--indi-blue-green-1);
           }
+
           &.green {
             transition-delay: $transition-time;
             stroke: var(--indi-green-1);
@@ -343,7 +248,10 @@ $shadowspace: 10vw;
   .mobile-menu {
     visibility: hidden;
     position: fixed;
-    top: clamp(0px, 16vw, 68px);
+    // clamp doesn't support 0 without unit.
+    // compiler transfers 0px back to 0 thus rendering this broken.
+    // this is a know issue in css
+    top: clamp(0.01px, 16vw, 68px);
     left: 0;
     height: 100%;
     width: 100%;
@@ -391,6 +299,7 @@ $shadowspace: 10vw;
         position: absolute;
         top: 0;
         width: 100%;
+
         &.visible {
           left: 0;
           transition-delay: 0s;
@@ -408,6 +317,7 @@ $shadowspace: 10vw;
 
         ul {
           margin: 0;
+
           li {
             a {
               display: inline-block;
@@ -424,9 +334,11 @@ $shadowspace: 10vw;
 
         &.level-1 {
           width: 100vw - $shadowspace - $linespace;
+
           ul {
             li {
               border-bottom: solid 1px var(--indi-blue-1);
+
               .sub-menu-toggle {
                 border-left: solid 1px var(--indi-blue-1);
               }
@@ -437,9 +349,11 @@ $shadowspace: 10vw;
         &.level-2 {
           position: absolute;
           width: 100vw - $shadowspace - $linespace * 2;
+
           ul {
             li {
               border-bottom: solid 1px var(--indi-blue-green-1);
+
               .sub-menu-toggle {
                 border-left: solid 1px var(--indi-blue-green-1);
               }
@@ -450,9 +364,11 @@ $shadowspace: 10vw;
         &.level-3 {
           position: absolute;
           width: 100vw - $shadowspace - $linespace * 3;
+
           ul {
             li {
               border-bottom: solid 1px var(--indi-green-1);
+
               .sub-menu-toggle {
                 border-left: solid 1px var(--indi-green-1);
               }
@@ -477,13 +393,14 @@ $shadowspace: 10vw;
     .mobile-menu-shadow {
       position: absolute;
       z-index: -1;
-      background-color: hsla(0, 0, 0, 0.9);
+      background-color: hsla(0, 0%, 0%, 0.9);
       top: 0;
       left: 0;
       height: 100%;
       width: 100%;
       transition: $transition-time ease-in-out;
       opacity: 1;
+
       &.hidden {
         transition-delay: $transition-time;
         opacity: 0;

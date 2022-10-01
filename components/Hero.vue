@@ -1,50 +1,15 @@
 <template>
-  <div class="heading">
-    <AnimatedLine
-      :top="0"
-      right="-10px"
-      :interval="2000"
-      :doHideMobile="true"
-    />
-    <AnimatedLine
-      right="75px"
-      :bottom="0"
-      :interval="4000"
-      :rotate="90"
-      :doHideMobile="true"
-    />
-    <AnimatedLine
-      right="115px"
-      :bottom="0"
-      :interval="6000"
-      :rotate="90"
-      :doHideMobile="true"
-    />
-    <AnimatedLine
-      left="-16px"
-      top="28px"
-      :interval="8000"
-      :rotate="180"
-      :doHideMobile="true"
-    />
+  <div class="hero">
+    <AnimatedLine :top="0" right="-10px" :interval="2000" :doHideMobile="true" />
+    <AnimatedLine right="75px" :bottom="0" :interval="4000" :rotate="90" :doHideMobile="true" />
+    <AnimatedLine right="115px" :bottom="0" :interval="6000" :rotate="90" :doHideMobile="true" />
+    <AnimatedLine left="-16px" top="28px" :interval="8000" :rotate="180" :doHideMobile="true" />
 
-    <AnimatedLine
-      left="-10%"
-      bottom="28px"
-      :interval="2500"
-      :rotate="180"
-      :doHideMobile="false"
-    />
-    <AnimatedLine
-      left="40vw"
-      top="2px"
-      :interval="3500"
-      :rotate="45"
-      :doHideMobile="false"
-    />
+    <AnimatedLine left="-10%" bottom="28px" :interval="2500" :rotate="180" :doHideMobile="false" />
+    <AnimatedLine left="40vw" top="2px" :interval="3500" :rotate="45" :doHideMobile="false" />
 
-    <div class="heading-content">
-      <img class="heading-logo" :src="topLogoUrl" alt="Indicium Logo" />
+    <div class="hero-content">
+      <img class="hero-logo" :src="topLogoUrl" alt="Indicium Logo" />
 
       <h1 class="fadeInUp">
         Wij zijn dé
@@ -66,7 +31,7 @@ import TextLink from "../components/interactions/TextLink";
 import AnimatedLine from "../components/AnimatedLine";
 
 export default {
-  name: "Heading",
+  name: "Hero",
   data: () => ({
     topLogoUrl: "/logo/indicium-logo-top.svg",
   }),
@@ -95,7 +60,7 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/variables.scss";
 
-.heading {
+.hero {
   display: flex;
   justify-content: center;
   padding: 128px 0 192px;
